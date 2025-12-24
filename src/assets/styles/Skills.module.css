@@ -50,7 +50,7 @@
 }
 
 .skillList > li {
-  list-style-type: nogine;
+  list-style-type: none;
 }
 .skillList > li::before {
   content: '•';
