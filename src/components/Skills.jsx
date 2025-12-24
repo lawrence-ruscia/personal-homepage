@@ -10,12 +10,12 @@ export const Skills = () => {
         <div className={styles.grid}>
           <h3 className={styles.heading}>
             <Monitor className={styles.icon} />
-            Frontend Development
+            Frontend
           </h3>
           <ul className={styles.skillList}>
             <li>React</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>TypeScript</li>
+            <li>HTML & CSS</li>
             <li>Vite</li>
           </ul>
         </div>
@@ -23,25 +23,28 @@ export const Skills = () => {
         <div className={styles.grid}>
           <h3 className={styles.heading}>
             <Server className={styles.icon} />
-            Backend Development
+            Backend
           </h3>
           <ul className={styles.skillList}>
             <li>Node.js</li>
-            <li>Express</li>
+            <li>Express.js</li>
+            <li>REST APIs</li>
             <li>PostgreSQL</li>
+            <li>JWT Authentication</li>
           </ul>
         </div>
 
         <div className={styles.grid}>
           <h3 className={styles.heading}>
             <Hammer className={styles.icon} />
-            Tools & Version Control
+            Testing & Tools
           </h3>
           <ul className={styles.skillList}>
-            <li>Git</li>
-            <li>Github</li>
-            <li>Vercel</li>
-            <li>Jest</li>
+            <li>Jest & Vitest</li>
+            <li>Supertest</li>
+            <li>Postman</li>
+            <li>Git & GitHub</li>
+            <li>Vercel / Render</li>
           </ul>
         </div>
       </div>

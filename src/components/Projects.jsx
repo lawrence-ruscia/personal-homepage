@@ -1,12 +1,6 @@
 import styles from '../assets/styles/Projects.module.css';
-import ecommerce_400 from '../assets/images/e-commerce-400.jpg';
-import ecommerce_800 from '../assets/images/e-commerce-800.jpg';
-import ecommerce_1200 from '../assets/images/e-commerce-1200.jpg';
-import ecommerce_1600 from '../assets/images/e-commerce-1600.jpg';
-import data_visualization_400 from '../assets/images/data-visualization-400.jpg';
-import data_visualization_800 from '../assets/images/data-visualization-800.jpg';
-import data_visualization_1200 from '../assets/images/data-visualization-1200.jpg';
-import data_visualization_1600 from '../assets/images/data-visualization-1600.jpg';
+import fundxpert_preview from '../assets/images/fundxpert-preview.png';
+import cv_builder_preview from '../assets/images/cv-builder-preview.png';
 
 import { useBreakpoint } from '../utils/useBreakpoint';
 import { ExternalLink } from 'lucide-react';
@@ -22,52 +16,51 @@ export const Projects = () => {
         <div className={styles.projectItem}>
           <div className={styles.content}>
             <div className={styles.description}>
-              <h3>Enterprise E-commerce Platform</h3>
+              <h3>FundXpert – Provident Fund Management System</h3>
               <p>
-                A high-performance e-commerce solution handling 100K+ daily
-                transactions with real-time inventory and ML-powered
-                recommendations.
+                A full-stack web application that digitizes employee retirement
+                fund workflows, including contributions, loan applications,
+                approvals, and HR processing, with a strong focus on security
+                and automated testing.
               </p>
             </div>
 
             <div className={styles.technology}>
               <ul className={styles.frontend}>
                 <p>Frontend</p>
-                <li>Next.js Server Components</li>
-                <li>Real-time Cart & Inventory</li>
-                <li>Stripe Payment Integration</li>
-                <li>PWA with Offline Support</li>
+                <li>React with TypeScript</li>
+                <li>Role-based dashboards (Employee, HR, Admin)</li>
+                <li>Reusable components & custom hooks</li>
+                <li>Responsive UI with Tailwind CSS</li>
               </ul>
+
               <ul className={styles.backend}>
                 <p>Backend</p>
-                <li>Node.js Microservices</li>
-                <li>Redis Caching Layer</li>
-                <li>Kafka Event Streaming</li>
-                <li>Elasticsearch Product Search</li>
+                <li>Node.js & Express REST APIs</li>
+                <li>PostgreSQL database with Prisma ORM</li>
+                <li>JWT authentication & TOTP-based 2FA</li>
+                <li>Role-based access control & approval workflows</li>
               </ul>
+
               <ul className={styles.features}>
-                <p>Key Features</p>
-                <li>99.99% Uptime with Blue-Green Deployment</li>
-                <li>300ms Average API Response Time</li>
-                <li>45% Reduction in Infrastructure Costs</li>
+                <p>Key Highlights</p>
+                <li>~75% automated test coverage (unit & integration)</li>
+                <li>Multi-level approval flows across 3 user roles</li>
+                <li>Authorization bypass vulnerability identified & fixed</li>
               </ul>
             </div>
           </div>
           <div className={styles.preview}>
-            <ResponsiveImage
-              src={ecommerce_1600}
-              srcSet={`
-                ${ecommerce_400} 400w,
-                ${ecommerce_800} 800w,
-                ${ecommerce_1200} 1200w,
-                ${ecommerce_1600} 1600w
-              `}
-              sizes='(min-width: 1024px) 50vw, 100vw'
+            <img
+              src={fundxpert_preview}
+              style={{ width: '100%', height: 'auto' }}
             />
 
             <div className={styles.links}>
               <a
-                href='#preview'
+                href='https://fundxpert.vercel.app'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='cta'
                 aria-label='View live demo'
                 title='View live demo'
@@ -81,7 +74,9 @@ export const Projects = () => {
                 )}
               </a>
               <a
-                href='#preview'
+                href='projects'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='secondaryBtn'
                 aria-label='View code on GitHub'
                 title='View code on GitHub'
@@ -91,6 +86,7 @@ export const Projects = () => {
                 ) : (
                   <>
                     <Github color='var(--color-text-muted)' /> View Code
+                    (Private)
                   </>
                 )}
               </a>
@@ -101,50 +97,44 @@ export const Projects = () => {
         <div className={styles.projectItem}>
           <div className={styles.content}>
             <div className={styles.description}>
-              <h3>Real-time Analytics Platform</h3>
+              <h3>CV Builder – Resume Generation Tool</h3>
               <p>
-                A scalable analytics platform processing 1M+ events per minute
-                with real-time dashboards and ML-powered insights.
+                A responsive web application that enables users to build and
+                preview resumes in real time, focusing on React state
+                management, controlled components, and live PDF rendering.
               </p>
             </div>
 
             <div className={styles.technology}>
               <ul className={styles.frontend}>
                 <p>Frontend</p>
-                <li>Real-time Data Visualization</li>
-                <li>Interactive Dashboards</li>
-                <li>Custom Chart Components</li>
-                <li>Data Export Tools</li>
+                <li>React with controlled components</li>
+                <li>Live form-to-preview state synchronization</li>
+                <li>Responsive UI using CSS Modules</li>
               </ul>
+
               <ul className={styles.backend}>
-                <p>Backend</p>
-                <li>Apache Kafka Streams</li>
-                <li>ClickHouse Analytics DB</li>
-                <li>Python Data Processing</li>
-                <li> Redis Time Series</li>
+                <p>PDF Rendering</p>
+                <li>@react-pdf/renderer for PDF generation</li>
+                <li>react-pdf for real-time document preview</li>
+                <li>Dynamic document styling</li>
               </ul>
+
               <ul className={styles.features}>
-                <p>Key Features</p>
-                <li>1M+ Events/Minute Processing</li>
-                <li>Sub-second Query Response</li>
-                <li>99.99% Data Accuracy</li>
+                <p>Key Highlights</p>
+                <li>Real-time CV preview and updates</li>
+                <li>Downloadable PDF resume</li>
+                <li>Mobile-first responsive design</li>
               </ul>
             </div>
           </div>
           <div className={styles.preview}>
-            <ResponsiveImage
-              src={data_visualization_1600}
-              srcSet={`
-                ${data_visualization_400} 400w,
-                ${data_visualization_800} 800w,
-                ${data_visualization_1200} 1200w,
-                ${data_visualization_1600} 1600w
-              `}
-              sizes='(min-width: 1024px) 50vw, 100vw'
-            />
+            <img src={cv_builder_preview} />
             <div className={styles.links}>
               <a
-                href='#preview'
+                href='https://renz-cv-builder.vercel.app/'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='cta'
                 aria-label='View live demo'
                 title='View live demo'
@@ -158,7 +148,9 @@ export const Projects = () => {
                 )}
               </a>
               <a
-                href='#preview'
+                href='https://github.com/lawrence-ruscia/cv-builder'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='secondaryBtn'
                 aria-label='View code on GitHub'
                 title='View code on GitHub'
