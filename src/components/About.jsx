@@ -30,10 +30,10 @@ const text4 = <p>Let’s build something great together.</p>;
 const largeScreenTexts = [text1, text2, text3, text4];
 const mobileScreenText = (
   <p>
-    I’m a full-stack developer with a strong quality mindset, experienced in
-    building and testing web applications using React, Node.js, and TypeScript.
-    I enjoy solving problems, improving system reliability, and collaborating to
-    ship production-ready software.
+    I’m a final-year IT student with hands-on experience building and testing
+    web applications using React, Node.js, and TypeScript. I enjoy learning by
+    doing, solving problems, and working with others to deliver reliable,
+    well-tested software.
   </p>
 );
 
